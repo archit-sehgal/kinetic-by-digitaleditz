@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-sand: #F6F3EC;
+    --ink-black: #121316;
+    --electric-yellow: #FFE500;
+    --paper-card: #FFFFFF;
+    --border-ink: #121316;
+  }
+
+  body {
+    background-color: var(--bg-sand);
+    color: var(--ink-black);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom typography families */
+.font-condensed {
+  font-family: 'Barlow Condensed', 'Antonio', sans-serif;
+}
+
+.font-script {
+  font-family: 'Caveat', cursive;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Technical Paper Dot Matrix Background */
+.paper-grid-bg {
+  background-image: radial-gradient(#121316 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
+/* Neo-Brutalist Tactile Paper Components */
+.btn-neo-yellow {
+  background-color: #FFE500;
+  color: #121316;
+  border: 2.5px solid #121316;
+  box-shadow: 4px 4px 0px #121316;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-neo-yellow:hover {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 6px 6px 0px #121316;
+}
+
+.btn-neo-yellow:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #121316;
+}
+
+.paper-card {
+  background-color: #FFFFFF;
+  border: 2.5px solid #121316;
+  box-shadow: 5px 5px 0px #121316;
+}
+
+.paper-card-yellow {
+  background-color: #FFE500;
+  border: 2.5px solid #121316;
+  box-shadow: 4px 4px 0px #121316;
+}
+
+/* Infinite Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}

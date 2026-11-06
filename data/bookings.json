@@ -1,0 +1,30 @@
+[
+  {
+    "id": "kin_1793914642660_pktvl",
+    "clientName": "Sophia Sterling",
+    "clientEmail": "sophia@sterlingaesthetics.com",
+    "instagramHandle": "@sterlingaesthetics",
+    "primaryGoal": "Content Creation & Direction",
+    "monthlyAdBudget": "$3,000 - $7,000 / mo",
+    "date": "2026-11-10",
+    "timeSlot": "11:30 AM",
+    "timezone": "EST (New York)",
+    "meetLink": "https://meet.google.com/kin-ayi0-aoo",
+    "createdAt": "2026-11-05T21:37:22.660Z",
+    "status": "confirmed"
+  },
+  {
+    "id": "kin_1793914607846_3dvk8",
+    "clientName": "Devin Clark",
+    "clientEmail": "devin@clarkgrowth.com",
+    "instagramHandle": "@clarkgrowth",
+    "primaryGoal": "Scale high-ticket B2B leads using vertical reels and paid ads",
+    "monthlyAdBudget": "$3,000 - $7,000 / mo",
+    "date": "2026-11-10",
+    "timeSlot": "11:30 AM",
+    "timezone": "EST (New York)",
+    "meetLink": "https://meet.google.com/kin-z9ix-mw0",
+    "createdAt": "2026-11-05T21:36:47.846Z",
+    "status": "confirmed"
+  }
+]

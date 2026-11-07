@@ -17,10 +17,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
         {/* Brand Wordmark with Yellow Capsule Badge */}
         <a href="#top" className="flex items-center gap-2 group">
           <span className="font-condensed text-3xl sm:text-4xl font-black uppercase tracking-tight text-[#121316]">
-            KINETIC
+            SOCIALX<span className="text-[#855800]">GROWTH</span>
           </span>
           <span className="rounded-full border-[1.5px] border-[#121316] bg-[#FFE500] px-2.5 py-0.5 text-[10px] font-mono font-bold tracking-widest text-[#121316] uppercase shadow-[1.5px_1.5px_0px_#121316]">
-            Growth Studio
+            Studio
           </span>
         </a>
 

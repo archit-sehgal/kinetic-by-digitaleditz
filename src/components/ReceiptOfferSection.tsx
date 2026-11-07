@@ -21,7 +21,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
               {/* Receipt Header */}
               <div className="text-center pb-4 border-b-2 border-dashed border-[#121316]">
                 <div className="font-condensed text-3xl font-black uppercase text-[#121316] tracking-tight">
-                  Kinetic Growth Sprint
+                  SocialXGrowth Sprint
                 </div>
                 <div className="text-[11px] text-neutral-600 mt-0.5">
                   1 × Monthly Client Partnership · Directed by Archit
@@ -97,7 +97,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
                   ))}
                 </div>
                 <div className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">
-                  KINETIC · DISCOVERY SESSION · NO OBLIGATION
+                  SOCIALXGROWTH · DISCOVERY SESSION · NO OBLIGATION
                 </div>
               </div>
             </div>

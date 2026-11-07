@@ -44,7 +44,7 @@ export const ExecutionPipeline: React.FC<ExecutionPipelineProps> = ({ onOpenBook
                 <span className="h-3 w-3 rounded-full bg-[#FFE500] inline-block border border-black/40" />
                 <span className="h-3 w-3 rounded-full bg-[#FFE500]/60 inline-block" />
                 <span className="h-3 w-3 rounded-full bg-emerald-500 inline-block" />
-                <span className="ml-2 font-bold text-neutral-200">kinetic · ~/growth-sprint</span>
+                <span className="ml-2 font-bold text-neutral-200">socialxgrowth · ~/growth-sprint</span>
               </div>
               <span className="text-[#FFE500] font-bold">status: active</span>
             </div>
@@ -107,7 +107,7 @@ export const ExecutionPipeline: React.FC<ExecutionPipelineProps> = ({ onOpenBook
               </div>
               <div className="rounded-[32px] border-[3.5px] border-[#121316] bg-[#121316] p-2.5 shadow-[8px_8px_0px_#121316] overflow-hidden aspect-[9/16]">
                 <video
-                  src="https://www.digitaleditz.com/elveraringvideo.mp4"
+                  src="/videos/talking-head-reel-1.mp4"
                   autoPlay
                   loop
                   muted

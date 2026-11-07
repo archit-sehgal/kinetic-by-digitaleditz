@@ -15,26 +15,26 @@ export const ProofVideoShowcase: React.FC<ProofVideoShowcaseProps> = ({ onOpenBo
     {
       num: '10X',
       unit: 'PIPELINE MULTIPLIER',
-      title: 'Luxury Real Estate & High-Ticket',
-      subtitle: 'Kapahi Properties Portfolio',
-      description: 'Architectural walk-throughs and geo-targeted paid reels delivering verified property buyer bookings.',
-      videoUrl: 'https://www.digitaleditz.com/realestatevideo.mp4',
+      title: 'Founder & Expert Talking-Head Direction',
+      subtitle: 'SocialXGrowth Strategy & Subtitle Cuts',
+      description: 'Motion graphic kinetic typography, 1.2s hook pacing, and automated comment routing directly to 30-min strategy calls.',
+      videoUrl: '/videos/talking-head-reel-2.mp4',
     },
     {
       num: '700%',
       unit: 'PEAK CAMPAIGN ROAS',
-      title: 'D2C & Hospitality Brand Films',
+      title: 'D2C & Viral Brand Films',
       subtitle: 'Gourmet Launch Direction',
-      description: 'High-contrast visual pattern interrupts and pacing cuts that stop the scroll and drive immediate orders.',
+      description: 'High-contrast visual pattern interrupts and pacing cuts that stop the scroll and drive immediate customer acquisition.',
       videoUrl: 'https://www.digitaleditz.com/burgervideo.mp4',
     },
     {
       num: '100K+',
-      unit: 'QUALIFIED INQUIRIES',
-      title: 'Aesthetic Luxury & FMCG Direction',
-      subtitle: 'Noor Haute Perfumery',
-      description: 'Cinematic commercial reels paired with automated comment-to-DM routing straight to appointment booking.',
-      videoUrl: 'https://www.digitaleditz.com/perfumevideo.mp4',
+      unit: 'QUALIFIED PROPERTY VIEWS',
+      title: 'Luxury Real Estate & High-Ticket',
+      subtitle: 'Kapahi Properties Portfolio',
+      description: 'Architectural walk-throughs and geo-targeted paid reels delivering verified property buyer bookings.',
+      videoUrl: 'https://www.digitaleditz.com/realestatevideo.mp4',
     },
   ];
 
@@ -112,7 +112,7 @@ export const ProofVideoShowcase: React.FC<ProofVideoShowcaseProps> = ({ onOpenBo
 
         {/* Bottom Proof Tagline */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-400 border-t border-neutral-800 pt-6">
-          <span>Engineered by Kinetic Growth Studio · Directed by Archit Sehgal</span>
+          <span>Engineered by SocialXGrowth Studio · Directed by Archit Sehgal</span>
           <button
             onClick={onOpenBooking}
             className="text-[#FFE500] hover:underline font-bold inline-flex items-center gap-1 cursor-pointer"

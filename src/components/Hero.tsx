@@ -87,7 +87,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
         {/* The 5-Phone Fanned Curved Reel Showcase with Real Brand Reels */}
         <div className="mt-14 relative max-w-5xl mx-auto pt-6 pb-2">
           <div className="flex items-center justify-center -space-x-8 sm:-space-x-12 md:-space-x-16 perspective-1000 overflow-x-hidden py-4">
-            {/* Phone 1: Far Left (Tilted -10deg) - Real Estate Walkthrough */}
+            {/* Phone 1: Far Left (Tilted -10deg) - Real Estate Walkthrough (From Original 5) */}
             <div className="relative w-44 sm:w-52 md:w-56 shrink-0 transform -rotate-10 -translate-y-2 hover:translate-y-[-12px] hover:rotate-0 hover:z-30 transition-all duration-300 z-10 hidden sm:block">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-[#121316] border-[2px] border-[#121316] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow-[2px_2px_0px_#121316] z-20 whitespace-nowrap">
                 Luxury Real Estate
@@ -104,14 +104,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               </div>
             </div>
 
-            {/* Phone 2: Inner Left (Tilted -5deg) - Fine Fragrance Campaign */}
+            {/* Phone 2: Inner Left (Tilted -5deg) - Full HD Talking-Head Reel 1 (Motion Graphics & On-Screen Typography) */}
             <div className="relative w-48 sm:w-56 md:w-60 shrink-0 transform -rotate-5 -translate-y-4 hover:translate-y-[-14px] hover:rotate-0 hover:z-30 transition-all duration-300 z-15">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FFE500] text-[#121316] border-[2px] border-[#121316] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow-[2px_2px_0px_#121316] z-20 whitespace-nowrap">
-                Haute Perfumery
+                Talking-Head Strategy
               </div>
               <div className="rounded-[30px] border-[3px] border-[#121316] bg-[#121316] p-2 shadow-[6px_6px_0px_#121316] overflow-hidden aspect-[9/16]">
                 <video
-                  src="https://www.digitaleditz.com/perfumevideo.mp4"
+                  src="/videos/talking-head-reel-1.mp4"
                   autoPlay
                   loop
                   muted
@@ -121,15 +121,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               </div>
             </div>
 
-            {/* Phone 3: Center (Prominent, Straight, Tallest, Interactive Sound) - Gourmet Burger Launch */}
+            {/* Phone 3: Center (Prominent, Straight, Tallest, Interactive Sound) - Full HD Talking-Head Reel 2 */}
             <div className="relative w-56 sm:w-64 md:w-72 shrink-0 transform hover:translate-y-[-10px] transition-all duration-300 z-20">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#121316] text-[#FFE500] border-[2px] border-[#121316] px-3.5 py-1 rounded-full text-xs font-mono font-black uppercase tracking-wider shadow-[3px_3px_0px_#FFE500] z-30 whitespace-nowrap">
-                Viral Product Launch
+                Talking-Head · Attention Gate
               </div>
               <div className="rounded-[34px] border-[3.5px] border-[#121316] bg-[#121316] p-2.5 shadow-[8px_8px_0px_#121316] overflow-hidden aspect-[9/16] relative group">
                 <video
                   ref={centerVideoRef}
-                  src="https://www.digitaleditz.com/burgervideo.mp4"
+                  src="/videos/talking-head-reel-2.mp4"
                   autoPlay
                   loop
                   muted={isMuted}
@@ -149,14 +149,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               </div>
             </div>
 
-            {/* Phone 4: Inner Right (Tilted 5deg) - Le Vora Luxury Handbags */}
+            {/* Phone 4: Inner Right (Tilted 5deg) - Gourmet Burger Launch (From Original 5) */}
             <div className="relative w-48 sm:w-56 md:w-60 shrink-0 transform rotate-5 -translate-y-4 hover:translate-y-[-14px] hover:rotate-0 hover:z-30 transition-all duration-300 z-15">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FFE500] text-[#121316] border-[2px] border-[#121316] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow-[2px_2px_0px_#121316] z-20 whitespace-nowrap">
-                Luxury Fashion D2C
+                Viral Product Launch
               </div>
               <div className="rounded-[30px] border-[3px] border-[#121316] bg-[#121316] p-2 shadow-[6px_6px_0px_#121316] overflow-hidden aspect-[9/16]">
                 <video
-                  src="https://www.digitaleditz.com/levorabagvideo.mp4"
+                  src="https://www.digitaleditz.com/burgervideo.mp4"
                   autoPlay
                   loop
                   muted
@@ -166,14 +166,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
               </div>
             </div>
 
-            {/* Phone 5: Far Right (Tilted 10deg) - Clinical Skincare Routine */}
+            {/* Phone 5: Far Right (Tilted 10deg) - Studio Direction Talking-Head */}
             <div className="relative w-44 sm:w-52 md:w-56 shrink-0 transform rotate-10 -translate-y-2 hover:translate-y-[-12px] hover:rotate-0 hover:z-30 transition-all duration-300 z-10 hidden sm:block">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-[#121316] border-[2px] border-[#121316] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow-[2px_2px_0px_#121316] z-20 whitespace-nowrap">
-                Clinical Skincare
+                Studio Direction
               </div>
               <div className="rounded-[28px] border-[3px] border-[#121316] bg-[#121316] p-2 shadow-[5px_5px_0px_#121316] overflow-hidden aspect-[9/16]">
                 <video
-                  src="https://www.digitaleditz.com/skincarevideo.mp4"
+                  src="/videos/talking-head-reel-1.mp4"
                   autoPlay
                   loop
                   muted

@@ -19,10 +19,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           <div>
             <div className="flex items-center gap-2">
               <span className="font-condensed text-3xl font-black uppercase text-white tracking-tight">
-                KINETIC
+                SOCIALX<span className="text-[#FFE500]">GROWTH</span>
               </span>
               <span className="rounded-full border border-[#FFE500] bg-[#FFE500] px-2 py-0.5 text-[9px] font-mono font-bold tracking-widest text-[#121316] uppercase">
-                GROWTH STUDIO
+                STUDIO
               </span>
             </div>
             <p className="mt-2 text-xs font-mono text-neutral-400 max-w-md">
@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-mono text-neutral-500">
           <div>
-            © {new Date().getFullYear()} Kinetic Growth Studio. All rights reserved.
+            © {new Date().getFullYear()} SocialXGrowth Studio. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
             <span>Directed by Archit Sehgal</span>

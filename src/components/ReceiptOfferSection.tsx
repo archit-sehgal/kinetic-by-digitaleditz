@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React from 'react';
 import { ArrowRight, Calendar, Video, Shield } from 'lucide-react';
 
@@ -12,8 +7,8 @@ interface ReceiptOfferSectionProps {
 
 export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpenBooking }) => {
   return (
-    <section className="border-b-[2.5px] border-[#121316] bg-[#F6F3EC] py-20 md:py-28 paper-grid-bg">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section className="border-b-[2.5px] border-[#121316] bg-[#F6F3EC] py-20 lg:py-28 paper-grid-bg">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Physical Supermarket Receipt Card */}
           <div className="lg:col-span-5 flex justify-center">
@@ -21,21 +16,21 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
               {/* Receipt Header */}
               <div className="text-center pb-4 border-b-2 border-dashed border-[#121316]">
                 <div className="font-condensed text-3xl font-black uppercase text-[#121316] tracking-tight">
-                  SocialXGrowth Sprint
+                  SocialXGrowth UK Sprint
                 </div>
                 <div className="text-[11px] text-neutral-600 mt-0.5">
-                  1 × Monthly Client Partnership · Directed by Archit
+                  1 × Monthly Partnership for UK Mortgage, Insurance & Real Estate Practices
                 </div>
               </div>
 
               {/* Itemized Deliverables */}
               <div className="py-5 space-y-2.5 text-xs text-neutral-800 border-b-2 border-dashed border-[#121316]">
                 <div className="flex justify-between">
-                  <span>30-min strategy discovery</span>
+                  <span>30-min UK strategy discovery</span>
                   <span className="font-bold text-emerald-700">FREE</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>12–16 teleprompter scripts</span>
+                  <span>12–16 FCA-safe & property scripts</span>
                   <span className="font-bold">✓</span>
                 </div>
                 <div className="flex justify-between">
@@ -43,7 +38,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
                   <span className="font-bold">✓</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>bionic kinetic typography</span>
+                  <span>bionic kinetic captions & rates</span>
                   <span className="font-bold">✓</span>
                 </div>
                 <div className="flex justify-between">
@@ -51,7 +46,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
                   <span className="font-bold">✓</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>paid media testing matrix</span>
+                  <span>regional UK paid ad set testing</span>
                   <span className="font-bold">✓</span>
                 </div>
                 <div className="flex justify-between">
@@ -59,7 +54,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
                   <span className="font-bold">✓</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>category territory exclusivity</span>
+                  <span>UK territory exclusivity</span>
                   <span className="font-bold">✓</span>
                 </div>
               </div>
@@ -78,7 +73,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
                   </div>
                 </div>
                 <div className="text-[10px] text-neutral-500 mt-1">
-                  Duration: 30 minutes · 1-on-1 with Archit Sehgal
+                  Duration: 30 minutes · 1-on-1 with Archit Sehgal (UK Hours)
                 </div>
               </div>
 
@@ -97,7 +92,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
                   ))}
                 </div>
                 <div className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">
-                  SOCIALXGROWTH · DISCOVERY SESSION · NO OBLIGATION
+                  SOCIALXGROWTH · UK DISCOVERY SESSION · NO OBLIGATION
                 </div>
               </div>
             </div>
@@ -112,12 +107,12 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
             <h2 className="font-condensed text-4xl sm:text-6xl font-black tracking-tight text-[#121316] uppercase leading-[0.95]">
               SET IT GOING,{' '}
               <span className="inline-block bg-[#FFE500] text-[#121316] px-3 py-0.5 border-[2.5px] border-[#121316] shadow-[4px_4px_0px_#121316] my-1 rotate-[-0.5deg]">
-                COME BACK TO A PIPELINE.
+                COME BACK TO QUALIFIED INQUIRIES.
               </span>
             </h2>
 
             <p className="mt-5 text-base sm:text-lg text-neutral-800 font-medium leading-relaxed max-w-xl">
-              You record guided takes for 60 minutes. Our studio scripts, edits, animations, and deploys everything across organic reels, paid Meta ads, and automated comment-to-DM funnels.
+              You record guided takes for 60 minutes once a month. Our studio scripts, edits, animates, and deploys everything across short-form platforms, targeted UK regional ads, and automated comment-to-DM funnels.
             </p>
 
             <div className="mt-8">
@@ -129,7 +124,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
                 <ArrowRight className="h-4 w-4 stroke-[2.5]" />
               </button>
               <p className="mt-2 text-xs font-mono text-neutral-600">
-                Direct access to Calendly · Choose your date & time slot in 30 seconds
+                Direct access to Calendly · Select your date & time slot in 30 seconds
               </p>
             </div>
 
@@ -141,7 +136,7 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
               </div>
               <div className="flex items-center gap-2 rounded-lg border-[1.5px] border-[#121316] bg-white px-3 py-2 shadow-[2px_2px_0px_#121316]">
                 <Video className="h-4 w-4 text-[#121316]" />
-                <span>Google Meet Private Room</span>
+                <span>Google Meet (UK Working Hours)</span>
               </div>
               <div className="flex items-center gap-2 rounded-lg border-[1.5px] border-[#121316] bg-white px-3 py-2 shadow-[2px_2px_0px_#121316]">
                 <Shield className="h-4 w-4 text-[#121316]" />
@@ -154,3 +149,4 @@ export const ReceiptOfferSection: React.FC<ReceiptOfferSectionProps> = ({ onOpen
     </section>
   );
 };
+

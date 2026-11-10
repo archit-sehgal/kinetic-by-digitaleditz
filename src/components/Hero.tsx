@@ -3,183 +3,128 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useRef } from 'react';
-import { ArrowRight, Volume2, VolumeX, Sparkles, Check } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { SafariSafeVideo } from './SafariSafeVideo';
 
 interface HeroProps {
-  onOpenBooking: () => void;
+  onOpenBooking: (packageTier?: string) => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
-  const [isMuted, setIsMuted] = useState(true);
-  const centerVideoRef = useRef<HTMLVideoElement>(null);
-
-  const toggleSound = () => {
-    if (centerVideoRef.current) {
-      centerVideoRef.current.muted = !centerVideoRef.current.muted;
-      setIsMuted(centerVideoRef.current.muted);
-    }
-  };
-
   return (
-    <section className="relative overflow-hidden pt-12 pb-8 md:pt-16 md:pb-12 paper-grid-bg border-b-[2.5px] border-[#121316]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        {/* Top Text Group */}
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Handwritten marker tape kicker */}
-          <div className="inline-block bg-[#FFE500] text-[#121316] font-script text-xl sm:text-2xl font-bold px-4 py-1 border-[2px] border-[#121316] shadow-[2.5px_2.5px_0px_#121316] -rotate-1 mb-3">
-            built for business outcomes, not vanity metrics
-          </div>
+    <section className="relative overflow-hidden border-b-[2.5px] border-[#121316] bg-[#F6F3EC] py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          {/* Left Column: Headlines & Actions */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            {/* Supporting Target Text */}
+            <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-mono font-bold uppercase tracking-wider text-[#121316] mb-4">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#FFE500] border border-[#121316]" />
+              <span>Content marketing for ambitious mortgage, insurance and real estate professionals across the UK</span>
+            </div>
 
-          {/* Giant condensed display headline with yellow block knockout */}
-          <h1 className="font-condensed text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-[#121316] uppercase leading-[0.92] text-balance">
-            TURN INSTAGRAM INTO YOUR{' '}
-            <span className="inline-block bg-[#FFE500] text-[#121316] px-3 sm:px-5 py-0.5 sm:py-1 border-[2.5px] border-[#121316] shadow-[4px_4px_0px_#121316] my-1 rotate-[-0.5deg]">
-              #1 CLIENT ENGINE.
-            </span>
-          </h1>
+            {/* Main Headline */}
+            <h1 className="font-condensed text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#121316] leading-[0.95]">
+              YOU BUILD THE BUSINESS.{' '}
+              <span className="inline-block bg-[#FFE500] text-[#121316] px-3 py-1 border-[2.5px] border-[#121316] my-1 shadow-[4px_4px_0px_#121316]">
+                WE BUILD YOUR ONLINE PRESENCE.
+              </span>
+            </h1>
 
-          {/* Subtitle */}
-          <p className="mt-5 text-base sm:text-lg text-neutral-800 max-w-2xl leading-relaxed font-medium">
-            We partner with ambitious founders, modern clinics, and high-ticket service brands to build category authority, engineered organic reels, targeted paid media, and automated inbound lead pipelines.
-          </p>
+            {/* Supporting Copy */}
+            <p className="mt-6 text-base sm:text-lg text-neutral-800 font-medium leading-relaxed max-w-2xl">
+              Turn your industry expertise into content that gets noticed, builds trust and brings the right people to your business.
+              We handle your content strategy, ideas, scripts, editing and publishing. All you have to do is record.
+            </p>
 
-          {/* CTA & Sticky Note Group */}
-          <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-            <button
-              onClick={onOpenBooking}
-              className="btn-neo-yellow w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-lg px-8 py-4 text-base font-black uppercase tracking-wider cursor-pointer"
-            >
-              <span>Book 30-Min Strategy Call</span>
-              <ArrowRight className="h-4 w-4 stroke-[2.5]" />
-            </button>
+            {/* Key Value Proposition Callout */}
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold text-[#121316]">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                <span>Zero scriptwriting or editing required</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                <span>60 minutes of recording per month</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                <span>Tailored for UK professional regulations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                <span>Done-for-you publishing & distribution</span>
+              </div>
+            </div>
 
-            {/* Tape-style Sticky Note Badge */}
-            <div className="paper-card-yellow rounded-lg px-4 py-3 flex items-center gap-2 rotate-[0.8deg] text-xs font-mono font-black tracking-tight">
-              <Sparkles className="h-4 w-4 shrink-0 text-[#121316]" />
-              <span>Current Intake: 1-on-1 Studio Cohort Open</span>
+            {/* Action Buttons */}
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <button
+                onClick={() => onOpenBooking()}
+                className="btn-neo-yellow inline-flex items-center justify-center gap-2.5 rounded-xl px-6 py-4 text-sm sm:text-base font-black uppercase tracking-wider cursor-pointer"
+              >
+                <span>Get Your Content Strategy</span>
+                <ArrowRight className="h-4 w-4 stroke-[3]" />
+              </button>
+
+              <a
+                href="#packages"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border-[2.5px] border-[#121316] bg-white px-6 py-4 text-sm sm:text-base font-bold uppercase tracking-wider text-[#121316] shadow-[4px_4px_0px_#121316] hover:bg-neutral-50 transition-all cursor-pointer text-center"
+              >
+                <span>Explore Packages</span>
+              </a>
+            </div>
+
+            {/* Quiet Reassurance Marker */}
+            <div className="mt-6 text-xs font-mono text-neutral-600 flex items-center gap-2">
+              <Sparkles className="h-3.5 w-3.5 text-amber-600" />
+              <span>We build your content strategy, create your content and grow your online presence. You just record.</span>
             </div>
           </div>
 
-          {/* 3 Trust Checkmarks */}
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-neutral-800 font-mono">
-            <div className="flex items-center gap-2">
-              <div className="rounded-full bg-[#FFE500] border-[1.5px] border-[#121316] p-0.5">
-                <Check className="h-3 w-3 text-[#121316] stroke-[3.5]" />
-              </div>
-              <span>Zero Generic Templates</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="rounded-full bg-[#FFE500] border-[1.5px] border-[#121316] p-0.5">
-                <Check className="h-3 w-3 text-[#121316] stroke-[3.5]" />
-              </div>
-              <span>Full Meta Ads Architecture</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="rounded-full bg-[#FFE500] border-[1.5px] border-[#121316] p-0.5">
-                <Check className="h-3 w-3 text-[#121316] stroke-[3.5]" />
-              </div>
-              <span>Automated Inbound Lead Routing</span>
-            </div>
-          </div>
-        </div>
-
-        {/* The 5-Phone Fanned Curved Reel Showcase with Real Brand Reels */}
-        <div className="mt-14 relative max-w-5xl mx-auto pt-6 pb-2">
-          <div className="flex items-center justify-center -space-x-8 sm:-space-x-12 md:-space-x-16 perspective-1000 overflow-x-hidden py-4">
-            {/* Phone 1: Far Left (Tilted -10deg) - Real Estate Walkthrough (From Original 5) */}
-            <div className="relative w-44 sm:w-52 md:w-56 shrink-0 transform -rotate-10 -translate-y-2 hover:translate-y-[-12px] hover:rotate-0 hover:z-30 transition-all duration-300 z-10 hidden sm:block">
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-[#121316] border-[2px] border-[#121316] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow-[2px_2px_0px_#121316] z-20 whitespace-nowrap">
-                Luxury Real Estate
-              </div>
-              <div className="rounded-[28px] border-[3px] border-[#121316] bg-[#121316] p-2 shadow-[5px_5px_0px_#121316] overflow-hidden aspect-[9/16]">
-                <video
-                  src="https://www.digitaleditz.com/realestatevideo.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover rounded-[20px]"
+          {/* Right Column: Visual of Recording + Finished Reel Relationship */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative rounded-2xl border-[3px] border-[#121316] bg-white p-3 sm:p-4 shadow-[8px_8px_0px_#121316]">
+              {/* Studio Recording Photography */}
+              <div className="relative overflow-hidden rounded-xl border-[2px] border-[#121316] aspect-[16/10] bg-neutral-100">
+                <img
+                  src="/src/assets/images/hero_creator_recording_1794314258439.jpg"
+                  alt="UK professional recording video content with studio smartphone tripod"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover"
                 />
+                <div className="absolute top-3 left-3 bg-[#121316] text-[#FFE500] px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider uppercase border border-black flex items-center gap-1.5">
+                  <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
+                  <span>STEP 1: YOU RECORD (60 MINS)</span>
+                </div>
               </div>
-            </div>
 
-            {/* Phone 2: Inner Left (Tilted -5deg) - Full HD Talking-Head Reel 1 (Motion Graphics & On-Screen Typography) */}
-            <div className="relative w-48 sm:w-56 md:w-60 shrink-0 transform -rotate-5 -translate-y-4 hover:translate-y-[-14px] hover:rotate-0 hover:z-30 transition-all duration-300 z-15">
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FFE500] text-[#121316] border-[2px] border-[#121316] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow-[2px_2px_0px_#121316] z-20 whitespace-nowrap">
-                Talking-Head Strategy
+              {/* Overlapping Finished Instagram Reel Preview */}
+              <div className="mt-3 bg-[#FAF8F5] border-[2px] border-[#121316] rounded-xl p-3 flex items-center gap-4">
+                <div className="w-20 sm:w-24 shrink-0 rounded-lg border-[2px] border-[#121316] overflow-hidden aspect-[9/16] bg-black shadow-[2px_2px_0px_#121316]">
+                  <SafariSafeVideo
+                    src="/videos/talking-head-reel-2.mp4"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <div className="inline-block bg-[#FFE500] text-[#121316] px-2 py-0.5 rounded text-[9px] font-mono font-bold uppercase tracking-wider border border-black mb-1">
+                    STEP 2: WE EDIT & PUBLISH
+                  </div>
+                  <h4 className="font-condensed text-base sm:text-lg font-black uppercase text-[#121316] leading-tight">
+                    Finished High-Impact Instagram Reel
+                  </h4>
+                  <p className="text-xs text-neutral-600 mt-1 leading-snug">
+                    Bionic captions, color grade, sound design & scheduling handled entirely for you.
+                  </p>
+                </div>
               </div>
-              <div className="rounded-[30px] border-[3px] border-[#121316] bg-[#121316] p-2 shadow-[6px_6px_0px_#121316] overflow-hidden aspect-[9/16]">
-                <video
-                  src="/videos/talking-head-reel-1.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover rounded-[22px]"
-                />
-              </div>
-            </div>
 
-            {/* Phone 3: Center (Prominent, Straight, Tallest, Interactive Sound) - Full HD Talking-Head Reel 2 */}
-            <div className="relative w-56 sm:w-64 md:w-72 shrink-0 transform hover:translate-y-[-10px] transition-all duration-300 z-20">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#121316] text-[#FFE500] border-[2px] border-[#121316] px-3.5 py-1 rounded-full text-xs font-mono font-black uppercase tracking-wider shadow-[3px_3px_0px_#FFE500] z-30 whitespace-nowrap">
-                Talking-Head · Attention Gate
-              </div>
-              <div className="rounded-[34px] border-[3.5px] border-[#121316] bg-[#121316] p-2.5 shadow-[8px_8px_0px_#121316] overflow-hidden aspect-[9/16] relative group">
-                <video
-                  ref={centerVideoRef}
-                  src="/videos/talking-head-reel-2.mp4"
-                  autoPlay
-                  loop
-                  muted={isMuted}
-                  playsInline
-                  className="w-full h-full object-cover rounded-[24px]"
-                />
-
-                {/* Tap For Sound Overlay Button */}
-                <button
-                  type="button"
-                  onClick={toggleSound}
-                  className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-[#121316]/90 hover:bg-[#121316] text-white border-[1.5px] border-white/40 px-3 py-1.5 rounded-full text-xs font-mono font-bold flex items-center gap-2 cursor-pointer backdrop-blur-sm shadow-lg transition-transform active:scale-95 z-30"
-                >
-                  {isMuted ? <VolumeX className="h-3.5 w-3.5 text-[#FFE500]" /> : <Volume2 className="h-3.5 w-3.5 text-[#FFE500]" />}
-                  <span>{isMuted ? 'Tap for sound' : 'Sound active'}</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Phone 4: Inner Right (Tilted 5deg) - Gourmet Burger Launch (From Original 5) */}
-            <div className="relative w-48 sm:w-56 md:w-60 shrink-0 transform rotate-5 -translate-y-4 hover:translate-y-[-14px] hover:rotate-0 hover:z-30 transition-all duration-300 z-15">
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FFE500] text-[#121316] border-[2px] border-[#121316] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow-[2px_2px_0px_#121316] z-20 whitespace-nowrap">
-                Viral Product Launch
-              </div>
-              <div className="rounded-[30px] border-[3px] border-[#121316] bg-[#121316] p-2 shadow-[6px_6px_0px_#121316] overflow-hidden aspect-[9/16]">
-                <video
-                  src="https://www.digitaleditz.com/burgervideo.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover rounded-[22px]"
-                />
-              </div>
-            </div>
-
-            {/* Phone 5: Far Right (Tilted 10deg) - Studio Direction Talking-Head */}
-            <div className="relative w-44 sm:w-52 md:w-56 shrink-0 transform rotate-10 -translate-y-2 hover:translate-y-[-12px] hover:rotate-0 hover:z-30 transition-all duration-300 z-10 hidden sm:block">
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-[#121316] border-[2px] border-[#121316] px-2.5 py-0.5 rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow-[2px_2px_0px_#121316] z-20 whitespace-nowrap">
-                Studio Direction
-              </div>
-              <div className="rounded-[28px] border-[3px] border-[#121316] bg-[#121316] p-2 shadow-[5px_5px_0px_#121316] overflow-hidden aspect-[9/16]">
-                <video
-                  src="/videos/talking-head-reel-1.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover rounded-[20px]"
-                />
+              {/* Tag below image */}
+              <div className="mt-3 flex items-center justify-between text-[11px] font-mono font-bold text-neutral-600 px-1">
+                <span>Done-for-you UK Instagram Growth</span>
+                <span className="text-[#121316]">SocialXGrowth Studio</span>
               </div>
             </div>
           </div>

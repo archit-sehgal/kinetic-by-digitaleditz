@@ -4,74 +4,100 @@
  */
 
 import React, { useState } from 'react';
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { Plus, Minus, ArrowUpRight } from 'lucide-react';
 
 interface FaqSectionProps {
   onOpenBooking: () => void;
 }
 
 export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenBooking }) => {
-  const [openIdx, setOpenIdx] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
-      q: 'How does the 60-minute monthly recording work?',
-      a: 'We research your market and write 12–16 complete word-by-word scripts. During a single 60-minute virtual session with Archit Sehgal, we feed you teleprompter lines, direct pacing, and capture all raw takes. You never need to edit or touch video software.',
+      q: 'Do I need to come up with my own content ideas?',
+      a: 'No. We research your industry, understand your business and develop relevant content ideas for you.',
     },
     {
-      q: 'Do you create generic social media reels or business outcome assets?',
-      a: 'Zero generic templates or dancing reels. Every single video is built around clear problem-solution psychology, bionic captioning, and comment-to-DM keyword triggers designed to route high-intent buyers into calendar bookings.',
+      q: 'Do I need to record the videos?',
+      a: 'Yes. You simply record yourself following the scripts we provide. We handle the rest.',
     },
     {
-      q: 'What is the format of the 30-minute strategy call?',
-      a: 'It is a 1-on-1 strategy deep dive via Google Meet directly with studio director Archit Sehgal. We review your current profile, diagnose your hook retention rate, and determine if our studio sprint is the right fit for your business.',
+      q: 'Do you write the video scripts?',
+      a: 'Yes. We provide the hooks and complete scripts so you know exactly what to say.',
     },
     {
-      q: 'Do we need an existing Instagram following to start?',
-      a: 'No. Our paired approach uses organic algorithmic retention gates combined with targeted paid Meta Ads distribution to get your best reels in front of verified ideal customers from day one.',
+      q: 'Do you edit the videos?',
+      a: 'Yes. Professional video editing is included in all packages.',
     },
     {
-      q: 'What if we already have an in-house marketing manager?',
-      a: 'Our studio functions as your dedicated video creative and acquisition unit. We supply the scripts, the directed shoots, the video post-production, and the inbound DM funnels so your internal team can focus on closing deals.',
+      q: 'Do you create carousel posts?',
+      a: 'Yes. Carousel design and creation are included in all packages.',
+    },
+    {
+      q: 'Do you manage publishing?',
+      a: 'Yes. We prepare, schedule and publish your content.',
+    },
+    {
+      q: 'Which industries do you work with?',
+      a: 'We primarily work with mortgage brokers, insurance brokers and real estate professionals across the UK.',
+    },
+    {
+      q: 'How much do your services cost?',
+      a: 'Our monthly packages start at £500, with options at £750 and £1,200.',
+    },
+    {
+      q: 'Can you guarantee leads or followers?',
+      a: "We don't make artificial guarantees. Our focus is building a consistent content strategy designed to improve visibility, reach relevant audiences, establish credibility and create more opportunities for enquiries.",
     },
   ];
 
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section id="faq" className="border-b-[2.5px] border-[#121316] bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="text-center mb-12">
-          <div className="inline-block bg-[#FFE500] text-[#121316] font-script text-xl font-bold px-3.5 py-1 border-[2px] border-[#121316] shadow-[2.5px_2.5px_0px_#121316] -rotate-1 mb-3">
-            Clear Answers
+    <section id="faq" className="border-b-[2.5px] border-[#121316] bg-white py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center">
+          <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#855800]">
+            Frequently Asked Questions
           </div>
-          <h2 className="font-condensed text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#121316]">
-            FREQUENTLY ASKED{' '}
-            <span className="inline-block bg-[#FFE500] text-[#121316] px-3 py-0.5 border-[2px] border-[#121316]">
-              QUESTIONS.
+          <h2 className="mt-3 font-condensed text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#121316]">
+            EVERYTHING YOU NEED TO{' '}
+            <span className="bg-[#FFE500] px-3 py-0.5 border-[2px] border-[#121316] shadow-[3px_3px_0px_#121316]">
+              KNOW BEFORE STARTING.
             </span>
           </h2>
+          <p className="mt-4 text-base sm:text-lg text-neutral-700 font-medium leading-relaxed">
+            Straightforward answers about our process, packages, and how we manage your Instagram content.
+          </p>
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-4">
+        <div className="mt-12 space-y-3">
           {faqs.map((faq, idx) => {
-            const isOpen = openIdx === idx;
+            const isOpen = openIndex === idx;
             return (
               <div
                 key={idx}
-                className="rounded-xl border-[2.5px] border-[#121316] bg-[#FAF8F5] overflow-hidden shadow-[4px_4px_0px_#121316] transition-all"
+                className="rounded-2xl border-[2px] border-[#121316] bg-[#FAF8F5] overflow-hidden transition-all shadow-[3px_3px_0px_#121316]"
               >
                 <button
-                  type="button"
-                  onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full p-5 text-left font-condensed text-xl sm:text-2xl font-bold uppercase text-[#121316] flex items-center justify-between gap-4 cursor-pointer hover:bg-neutral-100 transition-colors"
+                  onClick={() => toggleFaq(idx)}
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-neutral-50 transition-colors"
                 >
-                  <span>{faq.q}</span>
-                  <div className={`p-1.5 rounded bg-[#FFE500] border border-[#121316] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
-                    <ChevronDown className="h-4 w-4 text-[#121316] stroke-[3]" />
+                  <span className="font-condensed text-xl sm:text-2xl font-black uppercase text-[#121316] leading-snug">
+                    {faq.q}
+                  </span>
+                  <div className="h-8 w-8 rounded-lg bg-[#FFE500] border border-[#121316] flex items-center justify-center shrink-0 text-[#121316]">
+                    {isOpen ? <Minus className="h-4 w-4 stroke-[3]" /> : <Plus className="h-4 w-4 stroke-[3]" />}
                   </div>
                 </button>
+
                 {isOpen && (
-                  <div className="p-5 pt-0 text-xs sm:text-sm text-neutral-700 font-medium leading-relaxed border-t border-[#121316]/10 mt-2 font-sans">
+                  <div className="px-5 pb-6 sm:px-6 text-neutral-700 text-sm sm:text-base leading-relaxed border-t border-neutral-200 pt-4 font-normal">
                     {faq.a}
                   </div>
                 )}
@@ -80,17 +106,17 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenBooking }) => {
           })}
         </div>
 
-        {/* Bottom CTA prompt */}
-        <div className="mt-12 text-center">
-          <p className="text-xs font-mono text-neutral-600 mb-3">
-            Have a unique business model or question not covered here?
+        {/* Still Have Questions CTA */}
+        <div className="mt-10 text-center">
+          <p className="text-xs font-mono text-neutral-600">
+            Have a question specific to your practice or partnership model?
           </p>
           <button
             onClick={onOpenBooking}
-            className="btn-neo-yellow inline-flex items-center gap-2 rounded-lg px-6 py-3 text-xs font-black uppercase tracking-wider cursor-pointer"
+            className="mt-3 text-xs font-mono font-bold text-[#121316] hover:text-amber-800 underline inline-flex items-center gap-1 cursor-pointer"
           >
-            <span>Ask Archit on a 30-Min Call</span>
-            <ArrowRight className="h-4 w-4 stroke-[2.5]" />
+            <span>Ask us on a 30-Minute Strategy Call</span>
+            <ArrowUpRight className="h-3.5 w-3.5" />
           </button>
         </div>
       </div>

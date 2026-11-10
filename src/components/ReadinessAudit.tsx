@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { AUDIT_CHECKLIST, calculateAuditScore } from '../utils/calculator';
@@ -34,13 +29,13 @@ export const ReadinessAudit: React.FC<ReadinessAuditProps> = ({ onOpenBooking })
   const scoreResult = calculateAuditScore(passedCheckIds);
 
   return (
-    <section id="audit" className="border-b-[2.5px] border-[#121316] bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="audit" className="border-b-[2.5px] border-[#121316] bg-white py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Attention Architecture Story */}
+          {/* Left Column: Attention & Compliance Story */}
           <div className="lg:col-span-6">
             <div className="inline-block bg-[#FFE500] text-[#121316] font-script text-xl font-bold px-3.5 py-1 border-[2px] border-[#121316] shadow-[2.5px_2.5px_0px_#121316] -rotate-1 mb-3">
-              Studio Attention Architecture
+              UK Compliance & Attention Architecture
             </div>
 
             <h2 className="font-condensed text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#121316] leading-[0.95]">
@@ -51,16 +46,16 @@ export const ReadinessAudit: React.FC<ReadinessAuditProps> = ({ onOpenBooking })
             </h2>
 
             <p className="mt-5 text-sm sm:text-base text-neutral-800 font-medium leading-relaxed">
-              Most brands fail on Instagram because their videos have dead air, sluggish hooks, and no conversion funnel. Every video asset deployed by our studio must pass all 8 conversion gates before public release.
+              Most video content in the UK property and finance sectors fails because it is either dull corporate lecturing, non-compliant, or lacks an acquisition bridge. Every asset produced by our studio must pass all 8 conversion gates before public release.
             </p>
 
-            <div className="mt-8 space-y-3.5 text-xs font-semibold text-neutral-800 font-mono">
+            <div className="mt-8 space-y-4 text-xs font-semibold text-neutral-800 font-mono">
               <div className="flex items-start gap-3">
                 <span className="h-5 w-5 rounded-full bg-[#FFE500] border border-[#121316] flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">
                   ✓
                 </span>
                 <div>
-                  <strong>Visual Pattern Interrupt in 1.2s:</strong> Motion contrast and curiosity triggers before the user's thumb can scroll past.
+                  <strong>FCA-Safe Educational Framing:</strong> Clear, informative breakdown that positions your practice as the trusted local expert without misleading claims.
                 </div>
               </div>
 
@@ -69,7 +64,7 @@ export const ReadinessAudit: React.FC<ReadinessAuditProps> = ({ onOpenBooking })
                   ✓
                 </span>
                 <div>
-                  <strong>Pacing Gate (Zero Dead Air):</strong> Cuts every 1.5s eliminate pauses and maintain 75%+ average watch time.
+                  <strong>Visual Pattern Interrupt in 1.2s:</strong> Contrasting visual hook and market curiosity triggers that stop busy UK homeowners from scrolling past.
                 </div>
               </div>
 
@@ -78,7 +73,7 @@ export const ReadinessAudit: React.FC<ReadinessAuditProps> = ({ onOpenBooking })
                   ✓
                 </span>
                 <div>
-                  <strong>Comment-to-DM Pipeline:</strong> Automatic ManyChat keyword triggers deliver lead magnets straight to buyer inboxes.
+                  <strong>Automated Comment-to-DM Inbound Funnel:</strong> Specific keyword triggers (e.g., “RATES”, “VALUATION”) that deliver lead magnets directly into client inboxes.
                 </div>
               </div>
             </div>
@@ -88,7 +83,7 @@ export const ReadinessAudit: React.FC<ReadinessAuditProps> = ({ onOpenBooking })
                 onClick={onOpenBooking}
                 className="btn-neo-yellow inline-flex items-center gap-2 rounded-lg px-7 py-3.5 text-xs font-black uppercase tracking-wider cursor-pointer"
               >
-                <span>Audit Your Account on a 30-Min Call</span>
+                <span>Audit Your Content on a 30-Min Call</span>
                 <ArrowRight className="h-4 w-4 stroke-[2.5]" />
               </button>
             </div>
@@ -98,8 +93,8 @@ export const ReadinessAudit: React.FC<ReadinessAuditProps> = ({ onOpenBooking })
           <div className="lg:col-span-6">
             <div className="rounded-2xl border-[2.5px] border-[#121316] bg-[#FAF8F5] p-6 sm:p-8 shadow-[6px_6px_0px_#121316] relative">
               {/* Tape Badge at top */}
-              <div className="absolute -top-3.5 right-6 bg-[#121316] text-[#FFE500] px-3 py-1 rounded text-xs font-mono font-bold uppercase tracking-wider border border-black shadow-[2px_2px_0px_#FFE500]">
-                check · draft.mp4 [PASSED]
+              <div className="absolute -top-3.5 right-6 bg-[#121316] text-[#FFE500] px-3.5 py-1 rounded text-xs font-mono font-bold uppercase tracking-wider border border-black shadow-[2px_2px_0px_#FFE500]">
+                uk_advisory_check · draft.mp4 [PASSED]
               </div>
 
               <div className="flex items-center justify-between pb-4 border-b border-[#121316]/15">
@@ -112,7 +107,7 @@ export const ReadinessAudit: React.FC<ReadinessAuditProps> = ({ onOpenBooking })
                       Quality Gates Passed
                     </div>
                     <div className="text-[11px] font-mono text-emerald-700 font-bold">
-                      pace ✓ retention ✓ funnel ready
+                      FCA compliant ✓ retention ✓ booking ready
                     </div>
                   </div>
                 </div>
@@ -156,3 +151,4 @@ export const ReadinessAudit: React.FC<ReadinessAuditProps> = ({ onOpenBooking })
     </section>
   );
 };
+

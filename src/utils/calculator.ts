@@ -13,37 +13,45 @@ export interface GrowthBenchmark {
 }
 
 export const NICHE_BENCHMARKS: Record<string, GrowthBenchmark> = {
-  high_ticket_service: {
-    nicheKey: 'high_ticket_service',
-    name: 'High-Ticket B2B & Advisory',
-    benchmarkViewsPerReel: 18500,
+  uk_mortgage_broker: {
+    nicheKey: 'uk_mortgage_broker',
+    name: 'UK Mortgage Brokers (Remortgage, BTL, FTB)',
+    benchmarkViewsPerReel: 16500,
+    profileVisitRate: 0.052,
+    bookingConversionRate: 0.035,
+    avgCustomerLtv: 2400, // in GBP approx broker fee + procurement
+  },
+  uk_insurance_broker: {
+    nicheKey: 'uk_insurance_broker',
+    name: 'UK Insurance & Protection Brokers',
+    benchmarkViewsPerReel: 14000,
     profileVisitRate: 0.048,
-    bookingConversionRate: 0.024,
-    avgCustomerLtv: 4500,
+    bookingConversionRate: 0.032,
+    avgCustomerLtv: 1850,
+  },
+  uk_real_estate: {
+    nicheKey: 'uk_real_estate',
+    name: 'UK Estate Agents (Sales & Lettings)',
+    benchmarkViewsPerReel: 28000,
+    profileVisitRate: 0.058,
+    bookingConversionRate: 0.022,
+    avgCustomerLtv: 6500, // typical 1-1.5% commission on UK property
   },
   luxury_real_estate: {
     nicheKey: 'luxury_real_estate',
-    name: 'Luxury Real Estate & Architecture',
+    name: 'Prime UK Real Estate & Architecture',
     benchmarkViewsPerReel: 32000,
     profileVisitRate: 0.052,
     bookingConversionRate: 0.018,
     avgCustomerLtv: 8500,
   },
-  d2c_lifestyle: {
-    nicheKey: 'd2c_lifestyle',
-    name: 'D2C Brand & Luxury Goods',
-    benchmarkViewsPerReel: 45000,
-    profileVisitRate: 0.065,
-    bookingConversionRate: 0.032,
-    avgCustomerLtv: 350,
-  },
-  medical_clinic: {
-    nicheKey: 'medical_clinic',
-    name: 'Modern Aesthetics & Clinics',
-    benchmarkViewsPerReel: 24000,
-    profileVisitRate: 0.055,
-    bookingConversionRate: 0.038,
-    avgCustomerLtv: 1800,
+  high_ticket_service: {
+    nicheKey: 'high_ticket_service',
+    name: 'UK Financial & Property Advisory',
+    benchmarkViewsPerReel: 18500,
+    profileVisitRate: 0.048,
+    bookingConversionRate: 0.024,
+    avgCustomerLtv: 4500,
   },
 };
 
@@ -100,49 +108,49 @@ export const AUDIT_CHECKLIST: AuditCheck[] = [
   {
     id: 'hook_velocity',
     title: 'Visual Pattern Interrupt in 1.2s',
-    description: 'Motion contrast and curiosity triggers before the user can scroll away.',
+    description: 'UK market rate or property teaser that stops prospective borrowers and buyers from scrolling past.',
     weight: 15,
   },
   {
     id: 'subtitles_kinetic',
     title: 'Kinetic Bionic Word-by-Word Subtitles',
-    description: 'Styled, highlighted captions for silent feed consumption.',
+    description: 'Bold high-contrast captions ensuring 85%+ silent comprehension across UK commuter feeds.',
     weight: 15,
   },
   {
     id: 'pace_retention',
     title: 'Zero Dead Stretches Exceeding 1.4s',
-    description: 'Jump cuts and rhythm variations that sustain 70%+ retention rate.',
+    description: 'Tight micro-cuts eliminating pauses, sustaining 70%+ average watch time on short-form feeds.',
     weight: 15,
   },
   {
     id: 'bio_conversion',
-    title: 'Value-First Bio with Single Direct CTA',
-    description: 'Direct friction-free routing to 30-min strategy booking.',
+    title: 'Value-First Bio & FCA Compliance Framing',
+    description: 'Clean regulatory clarity with direct frictionless routing to a 30-min consultation slot.',
     weight: 10,
   },
   {
     id: 'comment_dm_automation',
-    title: 'Automated Comment-to-DM Growth Funnels',
-    description: 'Keyword trigger delivering lead magnets directly to prospect inboxes.',
+    title: 'Automated Comment-to-DM Inbound Funnels',
+    description: 'Keyword triggers (e.g. "RATE", "VALUATION", "PROTECT") delivering guides directly into client DMs.',
     weight: 15,
   },
   {
     id: 'sound_design',
     title: 'Custom Sound Design on Every Hit',
-    description: 'Synthesized whooshes, risers, and ducked audio bed on keyframes.',
+    description: 'Synthesized whooshes, risers, and ducked corporate audio beds for professional studio authority.',
     weight: 10,
   },
   {
     id: 'safe_zones',
-    title: 'Respect Instagram Safe Zones',
-    description: 'Crucial graphics positioned clear of bottom captions and right-side icons.',
+    title: 'Respect 9:16 Social Safe Zones',
+    description: 'Important figures, property details, and disclaimers kept within platform safe margins.',
     weight: 10,
   },
   {
     id: 'calendar_link_friction',
     title: 'Direct 30-Min Calendar Booking Funnel',
-    description: 'Zero form friction, direct Google Meet scheduling via Calendly.',
+    description: 'Zero booking friction with direct Google Meet scheduling configured for UK working hours.',
     weight: 10,
   },
 ];

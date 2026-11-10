@@ -6,28 +6,33 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { UrgencyMarquee } from './components/UrgencyMarquee';
-import { ProofVideoShowcase } from './components/ProofVideoShowcase';
-import { ExecutionPipeline } from './components/ExecutionPipeline';
-import { WhatsInTheSprint } from './components/WhatsInTheSprint';
-import { ReadinessAudit } from './components/ReadinessAudit';
-import { ReceiptOfferSection } from './components/ReceiptOfferSection';
+import { WhatWeDo } from './components/WhatWeDo';
+import { HowItWorks } from './components/HowItWorks';
+import { WhoWeWorkWith } from './components/WhoWeWorkWith';
+import { ContentApproach } from './components/ContentApproach';
+import { PackagesPricing } from './components/PackagesPricing';
+import { WhyUs } from './components/WhyUs';
+import { CaseStudies } from './components/CaseStudies';
+import { Testimonials } from './components/Testimonials';
 import { CalendarBookingSection } from './components/CalendarBookingSection';
 import { FaqSection } from './components/FaqSection';
-import { ClosingCtaBanner } from './components/ClosingCtaBanner';
+import { FinalCta } from './components/FinalCta';
+import { Footer } from './components/Footer';
 import { StickyBottomBar } from './components/StickyBottomBar';
 import { CalendarBookingModal } from './components/CalendarBookingModal';
-import { Footer } from './components/Footer';
 
 export default function App() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string | undefined>(undefined);
 
-  const handleOpenBooking = () => {
+  const handleOpenBooking = (packageTier?: string) => {
+    setSelectedPackage(packageTier);
     setIsBookingModalOpen(true);
   };
 
   const handleCloseBooking = () => {
     setIsBookingModalOpen(false);
+    setSelectedPackage(undefined);
   };
 
   return (
@@ -36,47 +41,54 @@ export default function App() {
       <Navbar onOpenBooking={handleOpenBooking} />
 
       <main>
-        {/* Hero Section with 5-Phone Fanned Video Showcase (Real DigitalEditz Brand Videos) */}
+        {/* 1. Hero Section */}
         <Hero onOpenBooking={handleOpenBooking} />
 
-        {/* Urgency Marquee Ribbon */}
-        <UrgencyMarquee />
+        {/* 2. What We Do - Six Core Categories */}
+        <WhatWeDo onOpenBooking={() => handleOpenBooking()} />
 
-        {/* Dark Video Proof Showcase */}
-        <ProofVideoShowcase onOpenBooking={handleOpenBooking} />
+        {/* 3. How It Works - 5 Simple Steps ("You Just Record. We Do The Rest.") */}
+        <HowItWorks onOpenBooking={() => handleOpenBooking()} />
 
-        {/* 60-Minute Execution Workflow & 3-Step Sequence */}
-        <ExecutionPipeline onOpenBooking={handleOpenBooking} />
+        {/* 4. Who We Work With - UK Mortgage, Insurance & Real Estate Professionals */}
+        <WhoWeWorkWith onOpenBooking={() => handleOpenBooking()} />
 
-        {/* What's In The Studio Sprint */}
-        <WhatsInTheSprint />
+        {/* 5. Our Content Approach - 9 Content Types & Instagram Previews */}
+        <ContentApproach onOpenBooking={() => handleOpenBooking()} />
 
-        {/* Studio Attention Quality Gate */}
-        <ReadinessAudit onOpenBooking={handleOpenBooking} />
+        {/* 6. Packages & Pricing - Starter £500, Growth £750, Authority £1,200 */}
+        <PackagesPricing onOpenBooking={handleOpenBooking} />
 
-        {/* Physical Supermarket Receipt Voucher */}
-        <ReceiptOfferSection onOpenBooking={handleOpenBooking} />
+        {/* 7. Why SocialXGrowth - Real Business Focus */}
+        <WhyUs onOpenBooking={() => handleOpenBooking()} />
 
-        {/* Embedded Calendly 30-Minute Scheduler */}
+        {/* 8. Our Experience & Case Studies - 4 Historical Projects with Honest Attribution */}
+        <CaseStudies onOpenBooking={() => handleOpenBooking()} />
+
+        {/* 9. Testimonials - Authentic Partner Feedback */}
+        <Testimonials />
+
+        {/* 10. Direct Calendar Booking */}
         <CalendarBookingSection />
 
-        {/* Good Questions / FAQ */}
-        <FaqSection onOpenBooking={handleOpenBooking} />
+        {/* 11. FAQ Section - 9 Exact Q&As */}
+        <FaqSection onOpenBooking={() => handleOpenBooking()} />
 
-        {/* Closing High-Voltage CTA Banner */}
-        <ClosingCtaBanner onOpenBooking={handleOpenBooking} />
+        {/* 12. Final High-Conversion CTA Banner */}
+        <FinalCta onOpenBooking={() => handleOpenBooking()} />
       </main>
 
       {/* Footer */}
-      <Footer onOpenBooking={handleOpenBooking} />
+      <Footer onOpenBooking={() => handleOpenBooking()} />
 
       {/* Persistent Floating Bottom Action Bar */}
-      <StickyBottomBar onOpenBooking={handleOpenBooking} />
+      <StickyBottomBar onOpenBooking={() => handleOpenBooking()} />
 
       {/* Popup Calendly Booking Modal */}
       <CalendarBookingModal
         isOpen={isBookingModalOpen}
         onClose={handleCloseBooking}
+        selectedPackage={selectedPackage}
       />
     </div>
   );
